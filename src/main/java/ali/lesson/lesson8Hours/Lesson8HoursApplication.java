@@ -19,10 +19,4 @@ public class Lesson8HoursApplication {
 		System.out.println(myClass.sayHello());
 
 	}
-
-	//@Bean
-	public MyClass myClass() {
-		return new MyClass();
-	}
-
 }
