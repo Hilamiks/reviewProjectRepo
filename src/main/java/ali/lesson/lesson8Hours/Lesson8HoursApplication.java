@@ -17,6 +17,5 @@ public class Lesson8HoursApplication {
 		//BEAN WAY
 		MyService myService = ctx.getBean(MyService.class);
 		System.out.println(myService.tellStory());
-
 	}
 }

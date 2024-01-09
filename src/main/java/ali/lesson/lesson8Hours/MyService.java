@@ -1,22 +1,28 @@
 package ali.lesson.lesson8Hours;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 @Service
+@PropertySource("classpath:custom.properties")
 public class MyService {
 
 	private final MyClass myClass;
 
+	@Value("${my.prop}")
+	private String customProperty;
+
 	public MyService(
-			//@Qualifier("bean1")
+			@Qualifier("bean1")
 			MyClass myClass
 	) {
 		this.myClass = myClass;
 	}
 
 	public String tellStory() {
-		return "the dependency is saying : " + myClass.sayHello();
+		return "property is : " + customProperty + "the dependency is saying : " + myClass.sayHello();
 	}
 
 }
