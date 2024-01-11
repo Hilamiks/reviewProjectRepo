@@ -4,11 +4,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.util.Collections;
+
 @SpringBootApplication
 public class Lesson8HoursApplication {
 
 	public static void main(String[] args) {
-		var ctx = SpringApplication.run(Lesson8HoursApplication.class, args);
+		var app = new SpringApplication(Lesson8HoursApplication.class);
+		app.setDefaultProperties(Collections.singletonMap("spring.profiles.active","custom"));
+		var ctx = app.run(args);
 
 //		OLD WAY
 //		MyClass myClass = new MyClass();

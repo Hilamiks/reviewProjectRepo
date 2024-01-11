@@ -6,16 +6,15 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 @Service
-@PropertySource("classpath:custom.properties")
+//@PropertySource("classpath:custom.properties")
 public class MyService {
 
 	private final MyClass myClass;
 
-	@Value("${my.prop}")
+	@Value("${my.custom.property}")
 	private String customProperty;
 
 	public MyService(
-			@Qualifier("bean1")
 			MyClass myClass
 	) {
 		this.myClass = myClass;
