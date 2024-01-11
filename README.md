@@ -1,1 +1,1 @@
-current Version: added config file
+current Version: messing with custom profiles
