@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import java.util.Collections;
 
 @SpringBootApplication
-public class Lesson8HoursApplication {
+public class  Lesson8HoursApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Lesson8HoursApplication.class);
